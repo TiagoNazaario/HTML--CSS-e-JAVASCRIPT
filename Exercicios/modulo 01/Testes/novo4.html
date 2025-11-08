@@ -1,0 +1,215 @@
+<!--
+dashboard_admin_cliente.html
+Wireframe HTML para sistema de gestão da "Empresa de Etiquetas"
+Arquivo único (HTML + CSS + pequenos SVGs). Salve como dashboard_admin_cliente.html
+-->
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Empresa de Etiquetas — Dashboard</title>
+    <style>
+        :root{
+            --bg:#f5f6f8;
+            --card:#ffffff;
+            --muted:#8a8f98;
+            --accent:#1f6feb;
+            --sidebar:#ffffff;
+            --border: #e6e9ee;
+            --radius:12px;
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+        html,body{height:100%;margin:0;background:var(--bg);color:#222}
+        .app{display:flex;min-height:100vh}
+
+
+        /* SIDEBAR */
+        .sidebar{
+            width:260px;flex:0 0 260px;background:var(--sidebar);border-right:1px solid var(--border);padding:28px 20px;box-sizing:border-box;border-radius:0}
+        .brand{font-weight:700;font-size:20px;margin-bottom:18px}
+        .nav{list-style:none;padding:0;margin:12px 0}
+        .nav li{display:flex;align-items:center;padding:12px 10px;border-radius:10px;color:#2b2f36;cursor:pointer}
+        .nav li:hover{background:#f0f5ff}
+        .nav svg{width:20px;height:20px;margin-right:12px;opacity:0.9}
+
+        /* MAIN AREA */
+        .main{flex:1;display:flex;flex-direction:column}
+        header.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:transparent;border-bottom:1px solid var(--border)}
+        .top-left{display:flex;align-items:center;gap:18px}
+        .page-title{font-size:28px;font-weight:700}
+        .logout{padding:8px 14px;border-radius:10px;background:transparent;border:1px solid var(--border);cursor:pointer}
+
+
+        /* grid content */
+        .content{padding:22px;display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(120px,auto);gap:18px}
+
+
+        .card{background:var(--card);border-radius:var(--radius);box-shadow:0 0 0 1px rgba(0,0,0,0.01);padding:18px;border:1px solid var(--border)}
+        .card.h-1{grid-column:span 4}
+        .card.h-2{grid-column:span 8}
+        .card.w-6{grid-column:span 6}
+        .card.w-3{grid-column:span 3}
+        .card.w-4{grid-column:span 4}
+        .card.w-12{grid-column:span 12}
+
+
+        .metric{font-size:34px;font-weight:700}
+        .metric-label{color:var(--muted);font-size:14px}
+
+        /* tabela e lista */
+        table{width:100%;border-collapse:collapse;font-size:14px}
+        th,td{padding:10px 8px;text-align:left;border-bottom:1px solid #f1f2f4}
+        th{color:var(--muted);font-weight:600}
+
+
+        /* timeline */
+        .timeline{display:flex;gap:8px;align-items:center}
+        .step{flex:1;padding:10px;border-radius:10px;text-align:center;background:#fbfcfe;border:1px solid var(--border)}
+
+
+        /* responsiveness */
+        @media (max-width:1000px){
+            .sidebar{display:none}
+            .content{padding:12px;grid-template-columns:repeat(6,1fr)}
+            .card.h-1{grid-column:span 3}
+            .card.h-2{grid-column:span 6}
+            .card.w-6{grid-column:span 6}
+            .card.w-3{grid-column:span 3}
+            .page-title{font-size:20px}
+        }
+        @media (max-width:600px){
+            .content{grid-template-columns:repeat(1,1fr)}
+            .topbar{padding:8px}
+        }
+
+        /* small helpers */
+        .muted{color:var(--muted);font-size:13px}
+        .flex{display:flex;align-items:center;gap:12px}
+        .spacer{flex:1}
+    </style>
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar" aria-label="Navegação">
+            <div class="brand">Empresa de Etiquetas</div>
+            <ul class="nav">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dashboard</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="3" stroke-width="1.2"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0" stroke-width="1.2" stroke-linecap="round"/></svg>Clientes</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2" ry="2" stroke-width="1.2"/><path d="M7 8h10" stroke-width="1.2"/></svg>Pedidos</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-2-2h-3.5L12 3 8.5 6H5a2 2 0 0 0-2 2v8" stroke-width="1.2"/><path d="M3 13h18" stroke-width="1.2"/></svg>Estoque</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3" stroke-width="1.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4" stroke-width="1.2"/></svg>Usuários</li>
+            </ul>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div class="top-left">
+                    <div class="page-title">Dashboard</div>
+                    <div class="muted">Visão geral — Administração</div>
+                </div>
+                <div class="flex">
+                    <button class="logout">Logout</button>
+                </div>
+            </header>
+
+            <section class="content">
+                <!-- cards -->
+                <div class="card w-3">
+                    <div class="metric">24</div>
+                    <div class="metric-label">Pedidos em andamento</div>
+                </div>
+
+
+                <div class="card w-3">
+                    <div class="metric">120</div>
+                    <div class="metric-label">Clientes cadastrados</div>
+                </div>
+
+
+                <div class="card w-3">
+                    <div class="metric">R$ 8.430</div>
+                    <div class="metric-label">Valor em estoque</div>
+                </div>
+
+
+                <div class="card w-3">
+                    <div class="metric">3</div>
+                    <div class="metric-label">Alertas de estoque</div>
+                </div>
+
+                <!-- line chart placeholder -->
+                <div class="card w-6" style="min-height:240px;">
+                    <div class="flex"><strong> Nível de estoque </strong><div class="spacer"></div><div class="muted">Últimos 30 dias</div></div>
+                    <svg viewBox="0 0 600 200" style="width:100%;height:170px;margin-top:12px;">
+                        <polyline fill="none" stroke="#b1b7c2" stroke-width="3" points="20,150 110,120 180,70 260,95 340,105 420,120 540,60"/>
+                        <!-- marcações horizontais -->
+                        <g stroke="#efefef" stroke-width="1">
+                            <line x1="0" y1="30" x2="600" y2="30" />
+                            <line x1="0" y1="80" x2="600" y2="80" />
+                            <line x1="0" y1="130" x2="600" y2="130" />
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- pedidos recentes -->
+                <div class="card w-6" style="min-height:240px;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><strong>Últimos pedidos</strong><button style="border:0;background:transparent;color:var(--accent);cursor:pointer">Ver todos</button></div>
+                    <table>
+                        <thead>
+                            <tr><th>Número</th><th>Cliente</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>#00123</td><td>Cliente A</td><td>Em análise</td></tr>
+                            <tr><td>#00122</td><td>Cliente B</td><td>Produção</td></tr>
+                            <tr><td>#00121</td><td>Cliente C</td><td>Pronto para envio</td></tr>
+                            <tr><td>#00120</td><td>Cliente D</td><td>Concluído</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- timeline do pedido -->
+                <div class="card w-4" style="grid-column:span 4">
+                    <strong>Exemplo: Linha do tempo do pedido</strong>
+                    <div class="timeline" style="margin-top:12px">
+                        <div class="step">Design<br><span class="muted">Concluído</span></div>
+                        <div class="step">Impressão<br><span class="muted">Produção</span></div>
+                        <div class="step">Acabamento<br><span class="muted">Pendente</span></div>
+                        <div class="step">Envio<br><span class="muted">Pendente</span></div>
+                    </div>
+                </div>
+
+                <!-- cartão de ações rápidas -->
+                <div class="card w-4">
+                    <strong>Ações rápidas</strong>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+                        <button style="padding:10px;border-radius:8px;border:1px solid var(--border);background:#fbfbfe;cursor:pointer">Novo pedido</button>
+                        <button style="padding:10px;border-radius:8px;border:1px solid var(--border);background:#fbfbfe;cursor:pointer">Cadastrar cliente</button>
+                        <button style="padding:10px;border-radius:8px;border:1px solid var(--border);background:#fbfbfe;cursor:pointer">Registrar entrada de estoque</button>
+                    </div>
+                </div>
+
+                <!-- cartão de resumo de estoque -->
+                <div class="card w-4">
+                    <strong>Resumo do estoque</strong>
+                    <ul style="margin:12px 0;padding-left:18px;color:var(--muted)">
+                        <li>Rolos adesivos — 120 un.</li>
+                        <li>Papel couché — 52 resmas</li>
+                        <li>Tintas CMYK — Nível médio</li>
+                    </ul>
+                </div>
+
+                <!-- barra inferior ampla -->
+                <div class="card w-12" style="display:flex;align-items:center;justify-content:space-between">
+                    <div>
+                        <strong>Notificações</strong>
+                        <div class="muted" style="margin-top:6px">3 pedidos com atraso; 2 materiais abaixo do nível mínimo.</div>
+                    </div>
+                    <div class="muted">Atualizado em: 02/10/2025 18:00</div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+</html>

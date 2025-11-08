@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background-color: rgb(63, 62, 61);
+            color: rgba(255, 255, 255, 0.863);
+        }
+
+        .container {
+            display: flex;              /* coloca em colunas */
+            justify-content: center;    /* centraliza no meio da tela */
+            gap: 50px;                  /* espaço entre colunas */
+        }
+
+        .col {
+            width: 300px;               /* largura fixa (opcional) */
+        }
+        h1, h2, h3 {
+            color: rgb(198, 212, 73);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Trabalhando com Listas</h1>
+    <div class="container">
+        <!-- Coluna 1 -->
+        <div class="col">
+            <h2>Listas Ordenadas</h2>
+            <ol type="I">
+                <h3>&lt;ol type="I"&gt;</h3>
+                <li>Acordar</li>
+                <li>Ligar para o João</li>
+                <li>Tomar café</li>
+                <li>Escovar os Dentes</li>
+            </ol>
+            <ol type="i">
+                <h3>&lt;ol type="i"&gt;</h3>
+                <li>Acordar</li>
+                <li>Ligar para o João</li>
+                <li>Tomar café</li>
+                <li>Escovar os Dentes</li>
+            </ol>
+            <ol type="A">
+                <h3>&lt;ol type="A"&gt;</h3>
+                <li>Acordar</li>
+                <li>Ligar para o João</li>
+                <li>Tomar café</li>
+                <li>Escovar os Dentes</li>
+            </ol>
+            <ol type="a">
+                <h3>&lt;ol type="a"&gt;</h3>
+                <li>Acordar</li>
+                <li>Ligar para o João</li>
+                <li>Tomar café</li>
+                <li>Escovar os Dentes</li>
+            </ol>
+            <ol type="1">
+                <h3>&lt;ol type="1"&gt; ou Nada</h3>
+                <li>Acordar</li>
+                <li>Ligar para o João</li>
+                <li>Tomar café</li>
+                <li>Escovar os Dentes</li>
+            </ol>
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="col">
+            <h2>Listas não Ordenadas</h2>
+            <ul type="disc">
+                <h3>&lt;ul type="disc"&gt; ou Nada</h3>
+                <li>Pão</li>
+                <li>Leite</li>
+                <li>Tomate</li>
+                <li>Manteiga</li>
+                <li>Alface</li>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul type="circle">
+                <h3>&lt;ul type="circle"&gt;</h3>
+                <li>Pão</li>
+                <li>Leite</li>
+                <li>Tomate</li>
+                <li>Manteiga</li>
+                <li>Alface</li>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul type="square">
+                <h3>&lt;ul type="square"&gt;</h3>
+                <li>Pão</li>
+                <li>Leite</li>
+                <li>Tomate</li>
+                <li>Manteiga</li>
+                <li>Alface</li>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+        </div>
+
+        <!-- Coluna 3 -->
+        <div class="col">
+            <h2>Listas Mistas</h2>
+            <h3>Minhas Linguagens favoritas</h3>
+            <ol>
+                <li>Antigas - &lt;ol type="a"&gt;</li>
+                <ol type="a">
+                    <li>Cliper</li>
+                    <li>Visual Basic</li>
+                    <li>Fortran</li>
+                    <li>Delphi</li>
+                </ol>
+                <li>Novas - &lt;ol type="a" start="5"&gt;</li>
+                <ol type="a" start="5">
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>Kotlin</li>
+                </ol>
+            </ol>
+
+            <h3>Meus Jogos Favoritos</h3>
+            <ol>
+                <li>NES</li>
+                <ul type="disc">
+                    <li>Mario Bros</li>
+                    <ul type="circle">
+                        <li>Mario Bros 3</li>
+                        <li>Mario: Lost Levels</li>
+                    </ul>
+                    <li>Ninja Gaiden</li>
+                </ul type="disc">
+                <li>SNES</li>
+                <ul type="disc">
+                    <li>Mario</li>
+                    <li>Donkey Kong</li>
+                </ul type="disc">
+                <li>Playstation</li>
+                <ul type="disc">
+                    <li>Final Fantasy</li>
+                    <li>Castlevania</li>
+                </ul type="disc">
+            </ol>
+        </div>
+
+        <!--Coluna 4-->
+        <div class="col">
+            <h2>Lista de Definições</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Linguagem de Marcação para a criação do conteúdo de um site</dd>
+                <dt>CSS</dt>
+                <dd>Linguagem de Marcação para a criação  do design de um site</dd>
+                <dt>Javascript</dt>
+                <dd>Linguagem de Programação para a criação de interatividade de um site</dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

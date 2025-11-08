@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(255, 255, 255, 0.288);
+    text-align: center;
+}
+h1 {
+    color: rgb(139, 0, 139);
+}
+h1#title_pri {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    background-color: rgb(139, 0, 139);
+    color: white;
+}
+p {
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.basico {
+    color: rgb(24, 139, 72);
+}
+.intermediario {
+   color: rgb(196, 199, 0);
+}
+.avancado {
+    color: rgb(179, 45, 12);
+}
+.destaque {
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color: #1685007c;
+}

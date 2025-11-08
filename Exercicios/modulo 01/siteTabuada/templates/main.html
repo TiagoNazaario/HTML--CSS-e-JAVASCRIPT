@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}">
+    <title>Tabuada</title>
+</head>
+<body>
+    <header>
+        <h1 onmouseenter="Entrar()" onmouseout="Sair()" id="headtab">Tabuada</h1>
+        <section>
+            <div id="dados">
+                <p>Numero: <input type="number" name="num" id="txtn"></p>
+                <input type="button" value="Gerar Tabuada" id="buttab" onclick="Tabuada()">
+            </div>
+            <div>
+                <select name="tabuada" id="seltab" size="1">
+                    <option > digite um numero da tabela acima...</option>
+                </select>              
+            </div>
+        </section>
+    </header>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="{{ url_for('static', filename= 'scripts/script.js')}}"></script>
+</body>
+</html>

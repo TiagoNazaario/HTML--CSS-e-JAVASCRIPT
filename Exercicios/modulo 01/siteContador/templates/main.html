@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}">
+    <title>Contagem</title>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+        <section>
+            <div id="dados">
+                <p>Ínicio: <input type="number" id="nInc" name="nInc"> </p>
+                <p>Fim: <input type="number" id="nFim" name="nFim"> </p>
+                <p>Passo: <input type="number" id="nPasso" name="nPasso"> </p>
+                <input type="button" value="Contar" onclick="Contar()" id="contar" name="contar"></button>
+            </div>
+            <div id="res">Digite os números para ver a contagem</div>
+        </section>
+    </header>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="{{ url_for('static', filename= 'scripts/script.js')}}"></script>
+</body>
+</html>
