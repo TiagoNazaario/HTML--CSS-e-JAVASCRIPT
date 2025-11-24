@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            width: max-content;
+            margin: 21px auto 70px auto;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        div#t1 td {
+            border: 1px solid black;
+            width: 85px;
+            height: 50px;
+            text-align: center;
+            vertical-align: top;
+            padding: 4px;
+
+        }
+        div#t1 tr.par {
+            background-color: gray;
+            color: white;
+            text-shadow: 2px 2px 1px #02020273;
+        }
+        div#t2 td, th{
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+            padding-right: 40px;
+        }
+        .bg-green {
+            background-color: green;
+        }
+        .bg-yellow {
+            background-color: yellow;
+        }
+        .bg-orange {
+            background-color: orangered;
+        }
+        .bg-red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="t1">
+        <h1>Minha Primeira Tabela</h1>
+
+        <!-- HIERARQUIA DE TABELAS (simples)
+            TABLE = tabela
+                TABLE ROW = linha de tabela
+                    TABLE HEADER = cabeçalho de tabela
+                    TABLE DATA = dado de tabela
+        -->
+        <table>
+            <tr> <!-- PRIMEIRA LINHA -->
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+                <td>D1</td>
+            </tr>
+            <tr class="par"> <!-- SEGUNDA LINHA -->
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+                <td>D2</td>
+            </tr>
+            <tr> <!-- TERCEIRA LINHA -->
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+                <td>D3</td>
+            </tr>
+            <tr class="par"> <!-- QUARTA LINHA -->
+                <td>A4</td>
+                <td>B4</td>
+                <td>C4</td>
+                <td>D4</td>
+            </tr>
+        </table>
+    </div>
+    <div id="t2">
+        <h1>Segunda Tabela</h1>
+
+        <table>
+
+            <colgroup>
+                <col class="bg-green color-white">
+                <col class="bg-yellow">
+                <col class="bg-orange">
+                <col class="bg-red">
+            </colgroup>
+
+            <caption>Cadastro</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Idade</th>
+                    <th>Profissão</th>
+                </tr>
+                <tr>
+                    <td>Ana Maria</td>
+                    <td>F</td>
+                    <td>25</td>
+                    <td>Jornalista</td>
+                </tr>
+                <tr>
+                    <td>Cláudio</td>
+                    <td>M</td>
+                    <td>28</td>
+                    <td>Programador</td>
+                </tr>
+                <tr>
+                    <td>Gustavo</td>
+                    <td>M</td>
+                    <td>42</td>
+                    <td>Professor</td>
+                </tr>
+                <tr>
+                    <td>Hélio</td>
+                    <td>M</td>
+                    <td>19</td>
+                    <td>Vendedor</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>F</td>
+                    <td>39</td>
+                    <td>Médica</td>
+                </tr>
+                <tr>
+                    <td>Otávio</td>
+                    <td>M</td>
+                    <td>22</td>
+                    <td>Nutricionista</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Italianno&family=Julius+Sans+One&family=Montserrat:ital,wght@0,451;1,451&family=Passion+One:wght@400;700;900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Story+Script&&family=Srirachadisplay=swap');
+
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+html, body {
+    min-height: 100vh;
+    font-family: var(--fonte1);
+}
+
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 6vw;
+}
+header > p {
+    padding-bottom: 50px;
+}
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3vw;
+}
+section p {
+    padding-bottom: 2em;
+}
+section.normal {
+    background-color: white;
+    color: black;
+}
+section.imagem {
+    background-color: rgb(26, 21, 21);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.527);
+    background-size: cover;
+    background-attachment: fixed;
+}
+section.imagem > p {
+    background-color: rgba(32, 27, 27, 0.514);
+    display: inline-block;
+    padding: 10px;
+    text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.493);
+}
+section#img1 {
+    background-image: url('imagens/pexels-karola-g-4622893.jpg');
+    background-position: center center;
+}
+section#img2 {
+    background-image: url('imagens/pexels-asumaani-15130118.jpg');
+    background-position: center right;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
