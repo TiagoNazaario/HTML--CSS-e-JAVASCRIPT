@@ -39,7 +39,7 @@ main {
 
 
     background-color: white;
-    width: 250px;
+    width: 270px;
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
@@ -56,4 +56,76 @@ main {
     display: block;
     padding: 10px;
 }
+
+
+#form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#form p {
+    font-size: 0.9em;
+}
+
+#form  .campo  span {
+    color: #292929;
+    background-image: linear-gradient(45deg, #359f44, #5bff72);
+    border-radius: 8px 0px 0px 8px;
+    padding: 2px;
+    font-size: 20px;
+    transform: translate(4px, 0px);
+}
+
+.campo input, label {
+    height: 24px;
+    vertical-align: top;
+}
+.campo input {
+    border: 1px solid #58F76E;
+    font-size: 14px;
+    padding-left: 3px;
+}
+
+
+
+form > input[type=submit] {
+    display: block;
+    margin: auto;
+    font-size: 1em;
+    width: 80%;
+    height: 30px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+form > input[type=submit]:hover {
+    background-color: #2a807d;
+    cursor: pointer;
+}
+form > a.botao {
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    width: 80%;
+    height: 30px;
+    background-color: #49a09d;
+    border-radius: 5px;
+    color: #153c3b;
+    margin-top: 3px;
+}
+form > a.botao:hover {
+    background-color: #2a807d;
+    color: white;
+}
+form > a.botao span {
+    font-size: 29px;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+
+
 

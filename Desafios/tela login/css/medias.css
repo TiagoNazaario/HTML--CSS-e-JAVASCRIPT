@@ -11,7 +11,7 @@ Grandes Telas: acima de 1200px
 
 @media screen and (min-width:768px) and (max-width:992px) {
     body, html {
-        background-image: linear-gradient(30deg, red, black);
+        background-image: linear-gradient(30deg, rgb(235, 35, 35), black);
     }
     #login {
         width: 60vw;
@@ -27,7 +27,41 @@ Grandes Telas: acima de 1200px
         float: right;
         width: 70%;
     }
+
+    #form h1 {
+        font-size: 2.3em;
+    }
+    #form p {
+        font-size: 1em;
+    }
+
+    form > input[type=submit] {
+       margin-left: 0px; 
+    }
+    form > a.botao {
+        margin-left: 0px; 
+    }
+
+    .campo input, label {
+        height: 27px;
+        vertical-align: top;
+        width: 200px;
+    }
+    .campo input {
+        border: 1px solid #fd4343;
+        font-size: 15px;
+    }
+
+    #form  .campo  span {
+        color: #333333;
+        background-image: linear-gradient(45deg, #df0000, #ff5a5a);
+        border-radius: 8px 0px 0px 8px;
+        padding: 1px;
+        font-size: 25px;
+        transform: translate(5px, 0px);
+    }
 }
+
 
 @media screen and (min-width:992px) {
     body, html {
@@ -46,5 +80,38 @@ Grandes Telas: acima de 1200px
     #login #form {
         float: left;
         width: 50%;
+    }
+
+    #form h1 {
+        font-size: 2.3em;
+    }
+    #form p {
+        font-size: 1em;
+    }
+
+    form > input[type=submit] {
+        margin-left: 0px;
+    }
+    form > a.botao {
+        margin-left: 0px;
+    }
+
+    .campo input, label {
+        height: 30px;
+        vertical-align: super;
+        width: 200px;
+    }
+    .campo input {
+        border: 1px solid #8a8afd;
+        font-size: 15px;
+    }
+
+    #form  .campo  span {
+        color: black;
+        background-image: linear-gradient(45deg, #1a1ac7, #9b9bff);
+        border-radius: 8px 0px 0px 8px;
+        padding: 2px;
+        font-size: 26px;
+        transform: translate(5px, 1px);
     }
 }
