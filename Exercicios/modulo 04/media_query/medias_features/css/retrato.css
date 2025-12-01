@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+/* APARELHO EM PÉ (PORTRAIT) */
+
+body {
+    background: url('../../imgs/cev-portrait.jpg');
+    background-position: center bottom;
+    background-size: 90vw 130vh;
+}

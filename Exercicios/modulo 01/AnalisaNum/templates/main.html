@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}">
+    <title>Analisar um número</title>
+</head>
+<body>
+    <header>
+        <h1 id="headtab">Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            Número (entre 1 e 100):
+            <input type="number" name="fnum" id="fnum">
+            <input type="button" value="Adicionar" onclick="Adicionar()">
+            <br><select name="selLista" id="selLista" size="6"></select>
+            <br><input type="button" value="Finalizar" onclick="Resultado()">
+        </div>
+        <div name="res" id="res">digite os números para ver o resultado...</div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="{{ url_for('static', filename= 'scripts/script.js')}}"></script>
+</body>
+</html>
