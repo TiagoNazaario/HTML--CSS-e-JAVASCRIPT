@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+/* Tipical Device Breakpoints 
+-----------------------------
+Pequenas Telas: até 600px
+Celular: 600px a 768px
+Tablet: 768px a 992px
+Desktop: 992px a 1200px
+Grandes Telas: acima de 1200px
+*/
+
+/* 
+  Variáveis para cores:
+  --fundo-principal
+  --texto
+  --texto-inverso
+  --destaque
+  --destaque-inverso
+  --fundo-card
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(216, 216, 216);
+}
+h2 {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  color: #1e1eff;
+  padding: 10px;
+}
+h2 > img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(54 54 255);
+  height: 46px;
+}
+header a {
+  text-decoration: none;
+  color: white;
+}
+header > ul > a > img {
+  width: 43px;
+  padding: 13px;
+  margin: 0px 2px;
+}
+header > ul > a > img:hover {
+  background-color: #3636c7;
+  border-radius: 7px;
+  transition: background-color 0.4s;
+}
+
+
+main {
+  background-color: #e1e1e1;
+  height: 100%;
+  display: grid;
+  grid-template: 440px 1fr / 30px 1fr 30px;
+  row-gap: 10px;
+  padding-bottom: 10px;
+}
+main .ficha {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+
+}
+main > .ficha > .perfil {
+  background: black url(../imagens/guanabara-perfil.jpg) center no-repeat;
+  width: 160px;
+  height: 160px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 0px 2px blue;
+  margin: 20px 0px;
+  justify-self: center;
+}
+main > .ficha > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > .ficha > h2, main > .ficha > p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+main > .ficha > h2 {
+  color: #1e1eff;
+  font-size: 20px;
+}
+main > .ficha > ul > a {
+  margin: 20px 5px;
+}
+main > .ficha > ul > a > img {
+  width: 25px;
+}
+#youtube {
+  height: 34px;
+  align-content: center;
+}
+#youtube img {
+  width: 30px;
+}
+
+.info {
+  grid-area: 2/ 2 / 3 / 3;
+}
+.apresentacao, .skills, .formacoes {
+  margin-bottom: 10px;
+}
+
+.info > .apresentacao {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.info > .apresentacao h2 {
+  font-family: Helvetica, sans-serif;
+}
+.info > .apresentacao img {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(93%) saturate(7218%) hue-rotate(248deg) brightness(95%) contrast(115%);
+}
+.info > .apresentacao iframe {
+  width: 430px;
+  height: 255px;
+  padding: 12px 10px;
+  border-radius: 22px;
+  align-self: center;
+} 
+
+
+.info > .skills {
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  border-radius: 10px;
+}
+.info > .skills  h3 {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.info > .skills > h2 > img {
+  width: 35px;
+  height: 30px;
+  filter: brightness(0) saturate(100%) invert(11%) sepia(93%) saturate(7218%) hue-rotate(248deg) brightness(95%) contrast(115%);
+}
+
+.info > .skills .range {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.info > .skills h3 {
+  font-size: 15px;
+  line-height: 21px;
+}
+.info > .skills .range img {
+  width: 24px;
+  height: 21px;
+  margin-right: 8px;
+}
+.info > .skills  .range progress{
+  width: 89%;
+}
+.info > .skills .range h4 {
+  display: inline;
+  color: #1e1eff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
+.info > .formacoes {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.info > .formacoes > h2 {
+  padding: 0px;
+}
+.info > .formacoes > .items {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 80px;
+  background-color: rgb(231 231 231);
+  border-radius: 8px;
+  padding: 4px 8px;
+  box-shadow: -2px 0px 0px 0px blue;
+  margin-left: 2px;
+  transition: all 0.4s;
+}
+.info > .formacoes > .items > h6 {
+  font-size: 12.4px;
+  color: black;
+  font-family: cursive;
+}
+.info > .formacoes > .items > h3 {
+  color: #167ac6;
+  font-size: 17px;
+}
+.info > .formacoes > .items > h4 {
+  color: rgb(113 113 113);
+  font-size: 15px;
+}
+
+.info > .formacoes > .items:hover {
+  margin-left: 8px;
+  box-shadow: -8px 0px 0px 0px blue;
+  cursor: pointer;
+}
+
+
+.info > .projetos {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  height: 2290px;
+}
+.info > .projetos > .items {
+  box-shadow: -2px 0px blue;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color: #dfdfdf;
+  height: 360px;
+  width: 95%;
+  margin: 0px 10px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  gap: 30px;
+  align-self: end;
+  transition: all 0.4s;
+}
+.info > .projetos > .items:hover {
+  cursor: pointer;
+  width: 93%;
+  box-shadow: -10px 0px blue;
+}
+.info > .projetos > .items > .img {
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.info > .projetos > .items > #img1 {
+  background: black url('../imagens/projeto-06-album.jpg') no-repeat;
+  background-size: cover;
+}
+.info > .projetos > .items > #img2 {
+  background: black url('../imagens/projeto-05-login.jpg') center no-repeat;
+  background-size: 80vw 45vh;
+}
+.info > .projetos > .items > #img3 {
+  background: black url('../imagens/projeto-04-links.jpg') center no-repeat;
+  background-size: cover;
+}
+.info > .projetos > .items > #img4 {
+  background: black url('../imagens/projeto-03-android.jpg') no-repeat;
+  background-size: cover;
+}
+.info > .projetos > .items > #img5 {
+  background: black url('../imagens/projeto-02-cordel.jpg') no-repeat;
+  background-size: cover;
+}
+.info > .projetos > .items > #img6 {
+  background: black url('../imagens/projeto-01-videos.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.info > .projetos > .items > .descricao{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.info > .projetos > .items > .descricao > h6 {
+  font-family: cursive;
+  font-size: 12px;
+}
+.info > .projetos > .items > .descricao > h3 {
+  font-size: 16px;
+}
+.info > .projetos > .items > .descricao > p {
+  font-size: 14px;
+}
+.info > .projetos > .items > .descricao > h5 > img {
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+}
+
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #3838eb;
+  color: rgba(255, 255, 255, 0.801);
+  text-align: center;
+  padding: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}

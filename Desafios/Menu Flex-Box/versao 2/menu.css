@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* Tipical Device Breakpoints 
+-----------------------------
+Pequenas Telas: até 600px
+Celular: 600px a 768px
+Tablet: 768px a 992px
+Desktop: 992px a 1200px
+Grandes Telas: acima de 1200px
+*/
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background-color: lightgrey;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+header {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    /* border: 1px dotted black; */ 
+    flex: 0 0 200px;
+}
+header nav {
+    /* border: 1px dotted black; */ 
+    display: flex;
+    flex-flow: row wrap;
+}
+header > nav > a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+header > nav > a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 0.6s;
+}
+
+
+main {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}

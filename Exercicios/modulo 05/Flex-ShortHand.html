@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        /* Flex-ShortdHand
+                flex-grow
+                flex-shrink
+                flex-basis
+
+
+            Flex: 0 1 auto; == Flex: initial; 
+            Flex: 0 0 auto; == Flex: none;
+            Flex: 1 1 auto; == Flex: auto;
+
+        */
+        code {
+            font-size: 1.3em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.container {
+            background-color: salmon;
+
+            display: flex; 
+            flex-flow: row nowrap;
+        }
+        
+        div.item {
+            background-color: aqua;
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+        #cxA {
+            flex: 0 2 200px;
+        }
+        #cxB {
+            /* flex-grow: 4;
+            flex-shrink: 1;
+            flex-basis: 200px; */
+
+            flex: 4 1 200px;
+        }
+        #cxC {
+            /* flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: auto; */
+
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+    <h1>Flex</h1>
+    <ul>
+        <li>
+            <code>Flex: 0 1 auto;  =  Flex: initial;</code> - Valor Padrão
+        </li>
+        <li>
+            <code>Flex: 0 0 auto;  =  Flex: none;</code> - Sem Flexibilidade
+        </li>
+        <li>
+            <code>Flex: 1 1 auto;  =  Flex: auto;</code> - Toda Flexibilidade
+        </li>
+        <li>
+            <code>Flex: 2;  =  Flex: 2 1 auto;</code> - Apenas Flex-Grow
+        </li>
+    </ul>
+</body>
+</html>

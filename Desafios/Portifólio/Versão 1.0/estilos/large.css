@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* Tipical Device Breakpoints 
+-----------------------------
+Pequenas Telas: até 600px
+Celular: 600px a 768px
+Tablet: 768px a 992px
+Desktop: 992px a 1200px
+Grandes Telas: acima de 1200px
+*/
+ 
+
+
+main {
+    grid-template: 1fr / 20px 350px 20px 1fr 20px;
+}
+
+
+.info {
+    grid-area: 1 / 4 / 2 / 5;
+    margin-top: 10px;
+}
+
+.info > .apresentacao > iframe {
+    width: 750px;
+    height: 435px;
+}
+
+.info > .projetos {
+    height: 2470px;
+}
+.info > .projetos > .items {
+    height: 390px;
+}
+.info > .projetos > .items:hover {
+    width: 94%;
+}
+
+.info > .projetos > .items > #img2 {
+    background-size: 64vw 60vh;
+}
+.info > .projetos > .items > #img3 {
+    background-size: 72vw 42vh;
+}
+.info > .projetos > .items > #img4 {
+    background-size: 64vw 42vh;
+    background-position: center;
+}
+
+
+
+

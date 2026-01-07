@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* Tipical Device Breakpoints 
+-----------------------------
+Pequenas Telas: até 600px
+Celular: 600px a 768px
+Tablet: 768px a 992px
+Desktop: 992px a 1200px
+Grandes Telas: acima de 1200px
+*/
+
+body {
+    width: 97vw;
+}
+
+header, header > nav {
+    flex-flow: column nowrap;
+}
+header h1 {
+    flex-basis: 50px;
+}
+header nav a {
+    width: 90vw;
+}
